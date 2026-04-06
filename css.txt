@@ -1,0 +1,99 @@
+/* General Layout */
+body { 
+    margin: 0; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    background: #f4f4f4; 
+    display: flex; 
+    justify-content: center; 
+}
+
+/* Mobile Container */
+.phone-container { 
+    width: 100%; 
+    max-width: 360px; 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    background: #fff; 
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+/* Calculator Screen */
+#display { 
+    background: #222; 
+    color: #fff; 
+    padding: 30px 20px; 
+    font-size: 2.5rem; 
+    text-align: right; 
+    min-height: 80px; 
+    word-wrap: break-word; 
+}
+
+/* Button Grid */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1px; 
+    background: #ddd; /* Acts as the border between buttons */
+}
+
+button { 
+    border: none; 
+    padding: 20px; 
+    font-size: 1.4rem; 
+    background: #fff; 
+    cursor: pointer; 
+    outline: none;
+}
+
+button:active { 
+    background: #eee; 
+}
+
+/* Operator and Special Buttons */
+.op { 
+    background: #f9f9f9; 
+    font-weight: bold; 
+    color: #333;
+}
+
+.eq { 
+    background: #007bff; 
+    color: #fff; 
+}
+
+.eq:active { 
+    background: #0056b3; 
+}
+
+/* History Section */
+.history-section { 
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding: 15px; 
+    background: #fff;
+    border-top: 2px solid #222; 
+}
+
+.history-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+.history-item { 
+    font-size: 1rem; 
+    padding: 8px 0; 
+    border-bottom: 1px solid #eee; 
+    color: #666; 
+}
+
+#clear-hist { 
+    font-size: 0.75rem; 
+    padding: 5px 10px; 
+    background: #eee; 
+    border: none;
+    cursor: pointer;
+}

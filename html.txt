@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat Calc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="phone-container">
+        <div id="display">0</div>
+
+        <div class="grid">
+            <button onclick="clearDisplay()" class="op">C</button>
+            <button onclick="append('/')" class="op">/</button>
+            <button onclick="append('*')" class="op">×</button>
+            <button onclick="backspace()" class="op">←</button>
+
+            <button onclick="append('7')">7</button>
+            <button onclick="append('8')">8</button>
+            <button onclick="append('9')">9</button>
+            <button onclick="append('-')" class="op">-</button>
+
+            <button onclick="append('4')">4</button>
+            <button onclick="append('5')">5</button>
+            <button onclick="append('6')">6</button>
+            <button onclick="append('+')" class="op">+</button>
+
+            <button onclick="append('1')">1</button>
+            <button onclick="append('2')">2</button>
+            <button onclick="append('3')">3</button>
+            
+            <button onclick="calculate()" style="grid-row: span 2;" class="eq">=</button>
+
+            <button onclick="append('0')" style="grid-column: span 2;">0</button>
+            <button onclick="append('.')">.</button>
+        </div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <strong>History</strong>
+                <button id="clear-hist" onclick="clearHistory()">Clear History</button>
+            </div>
+            <div id="history-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
